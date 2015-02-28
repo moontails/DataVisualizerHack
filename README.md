@@ -1,5 +1,6 @@
 # YelpVisualizerHack
 
+
 Worked on analyzing reviews from the yelp dataset, performing keyword extraction, sentiment analysis and generating a word cloud for beter summarization/visualization of the reviews.
 
 Steps -
@@ -8,8 +9,6 @@ Steps -
 - Process the dataset and index the required data.
 - Helper scripts to perform various tasks like - process data, load data from dataset, keyword extraction and sentiment analysis, split data for elasticsearch bulk processing, searchapi and flask server.
 - For UI used bootstrap
-
-My hack at #HackIllinois
 
 External APIs used
 - Alchemy API for advanced text analysis.
