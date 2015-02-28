@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Visualize</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href= "{{ url_for('static',filename='bootstrap-3.2.0-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+  <style>
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+  }
+  </style>
+
+  <!-- Custom styles for this template -->
+</head>
+
+<body>
+
+  <div class="navbar navbar-inverse " role="navigation">
+
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="dashboard.html">Visualize</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-md-8 col-md-offset-2">
+
+        <h1>Visualize Yelp Search</h1>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+          <div class="containser">
+            <p class="lead">
+              Understand your search results better!
+              Once you submit the search, a word cloud will be generated that will help you understand the reviews better!
+            </p>
+          </div>
+          <div class="container">
+            <form class="form-horizontal" action="http://127.0.0.1:5000/word_cloud" method="POST" enctype="multipart/form-data">
+
+              <div class="form-group ">
+
+                <label for="list1" class="col-sm-4 control-label">Enter the business to search</label>
+                <div class="col-sm-3">
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="list1" name="name" placeholder="database name">
+                    <span class="input-group-addon">Ex - chipotle</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="form-group">
+                <div class="col-sm-offset-3">
+                  <input type="submit" class="btn btn-primary col-sm-3" name="network-form" value="Send">
+                </div>
+              </div>
+
+              <div class="container">
+                <h2>Results</h2>
+                <img src="{{ url_for('static',filename='cloud_large.jpg',v=timestamp) }}" 
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container" style="text-align: center">
+    <br>
+    <p>Designed and built with all the love in the world by moontails!</p>
+    <p>For any suggestions please contact dragontransformer@gmail.com</p>
+  </div>
+</footer>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{ url_for('static',filename='bootstrap-3.2.0-dist/js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap-3.2.0-dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static',filename='bootstrap-3.2.0-dist/js/holder.js') }}"></script>
+<script type="text/javascript">
+  $('.dropdown-select').on( 'click', '.dropdown-menu li a', function() {
+    var target = $(this).html();
+
+    //Adds active class to selected item
+    $(this).parents('.dropdown-menu').find('li').removeClass('active');
+    $(this).parent('li').addClass('active');
+
+    //Displays selected text on dropdown-toggle button
+    $(this).parents('.dropdown-select').find('.dropdown-toggle').html(target + ' <span class="caret"></span>');
+  });</script>
+</body>
+</html>
