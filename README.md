@@ -1,7 +1,10 @@
 # YelpVisualizerHack
 
-
-Worked on analyzing reviews from the yelp dataset, performing keyword extraction, sentiment analysis and generating a word cloud for beter summarization/visualization of the reviews.
+My hack at #HackIllinois
+
+Motivation - to help users better understand the reviews for a business when they make a search.
+
+Summary - Worked on analyzing reviews from the yelp dataset, performing keyword extraction, sentiment analysis and generating a word cloud for beter summarization/visualization of the reviews.
 
 Steps -
 - You can download the dataset at http://www.yelp.com/dataset_challenge
