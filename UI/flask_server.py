@@ -17,12 +17,13 @@ def hello():
     return render_template('dashboard.html')
 
 @app.route('/word_cloud', methods=['POST'])
-def network_config():
-	print "Processing the submitted configurations for Network"
-	print request.form['name']
-	searchapi.search(request.form['name'])
+def word_cloud():
+    print "Processing the submitted configurations for Network"
+    print request.form['name']
+    if searchapi.newsearch(request.form['name']) == 0:
+        return render_template('dashboard-error.html')
 
-	return render_template('dashboard-results.html', timestamp = time.time())
+    return render_template('dashboard-results.html', timestamp = time.time())
 
 if __name__ == '__main__':
 	app.debug = True

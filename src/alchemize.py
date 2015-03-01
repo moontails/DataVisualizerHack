@@ -60,7 +60,7 @@ def nlp_process(ids,ids_hash):
             "business_id" : item,
             "word_freq": alchem_data
         }
-
+        exit()
         template = { "create": { "_index": "alchem", "_type": "doc"} }
         res = es.index(index="alchem", doc_type='doc', body=doc)
 
