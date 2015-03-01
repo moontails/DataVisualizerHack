@@ -19,3 +19,7 @@ External APIs used
 - Flask to serve requests in a RESTful way.
 - ElasticSearch for indexing and searching. 
 - NLTK for language modelling
+
+Output is in the form of a word cloud
+
+![](https://github.com/moontails/DataVisualizerHack/blob/60727ccd6880224fc1bb9db400f275fcbceb5094/images/cloud_large.jpg)
