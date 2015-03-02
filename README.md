@@ -22,4 +22,6 @@ External APIs used
 
 Output is in the form of a word cloud
 
-![](https://github.com/moontails/DataVisualizerHack/blob/60727ccd6880224fc1bb9db400f275fcbceb5094/images/cloud_large.jpg)
+- Sample output for Timpone's.
+
+![](https://raw.githubusercontent.com/moontails/DataVisualizerHack/master/images/cloud_large.jpg)
