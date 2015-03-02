@@ -11,7 +11,7 @@
     <title>Visualize</title>
 
     <!-- Bootstrap core CSS -->
-    <link href= "{{ url_for('static',filename='bootstrap-3.2.0-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href= "{{ url_for('static',filename='vendors/bootstrap-3.2.0-dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <style>
           html {
         position: relative;
@@ -112,9 +112,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{ url_for('static',filename='bootstrap-3.2.0-dist/js/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static',filename='bootstrap-3.2.0-dist/js/bootstrap.min.js') }}"></script>
-	<script src="{{ url_for('static',filename='bootstrap-3.2.0-dist/js/holder.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendors/bootstrap-3.2.0-dist/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='vendors/bootstrap-3.2.0-dist/js/bootstrap.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='vendors/bootstrap-3.2.0-dist/js/holder.js') }}"></script>
   <script type="text/javascript">
   $('.dropdown-select').on( 'click', '.dropdown-menu li a', function() {
      var target = $(this).html();
